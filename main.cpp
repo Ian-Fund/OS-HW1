@@ -257,11 +257,14 @@ void mulMatrix(struct addSub &x){
     x.resultMatrix [x.row][x.col2] += x.matrix1[x.row][x.col] * x.matrix2[x.col][x.col2];
 }
 
-void* subMatrix(void * sMatrix){
+void* sMatrix(void * sMatrix){
     // start timer here?
     struct addSub *x =  (struct addSub *)sMatrix;
     x->resultMatrix[x->row][x->col] = x->matrix1[x->row][x->col] - x->matrix2[x->row][x->col];
     return NULL;
-
+//
+//    struct addSub *x =  (struct addSub *)addMatrix;
+//    x->resultMatrix[x->row][x->col] = x->matrix1[x->row][x->col] + x->matrix2[x->row][x->col];
+//    return NULL;
     //update time stuff here
 }
